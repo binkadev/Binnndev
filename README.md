@@ -1,85 +1,119 @@
-<!-- Trungquandev -->
-<a href="#" target="_blank">
-  <img src="svg/Binnndev.svg" width="1200" alt="Binnndev-official" />
-</a>
-
-<h2 align="center">🛠 Technologies and Tools 🛠</h2>
-<br>
-<!-- https://simpleicons.org/ -->
-<span><img src="https://img.shields.io/badge/JavaScript-282C34?logo=javascript&logoColor=F7DF1E" alt="JavaScript logo" title="JavaScript" height="25" /></span>
-&nbsp;
-<span><img src="https://img.shields.io/badge/TypeScript-282C34?logo=typescript&logoColor=3178C6" alt="TypeScript logo" title="TypeScript" height="25" /></span>
-&nbsp;
-<span><img src="https://img.shields.io/badge/ReactJS-282C34?logo=react&logoColor=61DAFB" alt="ReactJS logo" title="ReactJS" height="25" /></span>
-&nbsp;
-<span><img src="https://img.shields.io/badge/Redux-282C34?logo=redux&logoColor=764ABC" alt="Redux logo" title="Redux" height="25" /></span>
-&nbsp;
-<span><img src="https://img.shields.io/badge/Vue.js-282C34?logo=vue.js&logoColor=4FC08D" alt="Vue.js logo" title="Vue.js" height="25" /></span>
-&nbsp;
-<span><img src="https://img.shields.io/badge/Nuxt.js-282C34?logo=nuxt.js&logoColor=4FC08D" alt="Nuxt.js logo" title="Nuxt.js" height="25" /></span>
-&nbsp;
-<span><img src="https://img.shields.io/badge/Node.js-282C34?logo=node.js&logoColor=00F200" alt="Node.js logo" title="Node.js" height="25" /></span>
-&nbsp;
-<span><img src="https://img.shields.io/badge/Express-282C34?logo=express&logoColor=FFFFFF" alt="Express.js logo" title="Express.js" height="25" /></span>
-&nbsp;
-<span><img src="https://img.shields.io/badge/MongoDB-282C34?logo=mongodb&logoColor=47A248" alt="MongoDB logo" title="MongoDB" height="25" /></span>
-&nbsp;
-<span><img src="https://img.shields.io/badge/Tailwind%20CSS-282C34?logo=tailwind-css&logoColor=38B2AC" alt="TailwindCSS logo" title="TailwindCSS" height="25" /></span>
-&nbsp;
-<span><img src="https://img.shields.io/badge/Three.js-282C34?logo=three.js&logoColor=FFFFFF" alt="Three.js logo" title="Three.js" height="25" /></span>
-&nbsp;
-<span><img src="https://img.shields.io/badge/HTML5-282C34?logo=html5&logoColor=E34F26" alt="HTML5 logo" title="HTML5" height="25" /></span>
-&nbsp;
-<span><img src="https://img.shields.io/badge/CSS3-282C34?logo=css3&logoColor=1572B6" alt="CSS3 logo" title="CSS3" height="25" /></span>
-&nbsp;
-<span><img src="https://img.shields.io/badge/Sass-282C34?logo=sass&logoColor=CC6699" alt="SASS logo" title="SASS" height="25" /></span>
-&nbsp;
-<span><img src="https://img.shields.io/badge/Bootstrap-282C34?logo=bootstrap&logoColor=7952B3" alt="Bootstrap logo" title="Bootstrap" height="25" /></span>
-&nbsp;
-<span><img src="https://img.shields.io/badge/ESLint-282C34?logo=eslint&logoColor=4B32C3" alt="ESLint logo" title="ESLint" height="25" /></span>
-&nbsp;
-<span><img src="https://img.shields.io/badge/git-282C34?logo=git&logoColor=F05032" alt="git logo" title="git" height="25" /></span>
-&nbsp;
-<span><img src="https://img.shields.io/badge/VS%20Code-282C34?logo=visual-studio-code&logoColor=007ACC" alt="Visual Studio Code logo" title="Visual Studio Code" height="25" /></span>
-&nbsp;
-<span><img src="https://img.shields.io/badge/Firebase-282C34?logo=firebase&logoColor=FFCA28" alt="Firebase logo" title="Firebase" height="25" /></span>
-&nbsp;
-<span><img src="https://img.shields.io/badge/WordPress-282C34?logo=wordPress&logoColor=21759B" alt="WordPress logo" title="WordPress" height="25" /></span>
-&nbsp;
-
-<br>
-<h2 align="center">🔥 GitHub Stats 🔥</h2>
-<!-- https://github.com/anuraghazra/github-readme-stats -->
-<br>
-<div align=center>
-  <a href="#" title="BinnnDEV">
-    <img width="315" align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=BinnnDEV&hide=c%23,powershell,Mathematica,Ruby,Objective-C,Objective-C%2b%2b,Cuda&title_color=61dafb&text_color=ffffff&icon_color=61dafb&bg_color=20232a&langs_count=8&layout=compact&border_color=61dafb&hide_border=true" />
-  </a>
-  <a href="#" title="BinnnDEV">
-    <img align="right" width="434" src="https://github-readme-stats.vercel.app/api?username=BinnnDEV&show_icons=true&theme=react&border_color=61dafb&hide_border=true" />
-  </a>
-</div>
-
-<br>
-<h2 align="center">👽 Where to find me 👽</h2>
-<br>
-<!-- https://icons8.com -->
 <div align="center">
-  <a href="https://www.facebook.com/Binn.BEM" target="blank">
-    <img src="https://img.icons8.com/bubbles/100/000000/facebook-new.png" alt="Binnndev-facebook" />
-  </a>
-  <a href="#" target="blank">
-    <img src="https://img.icons8.com/bubbles/100/000000/youtube-squared.png"/>
-  </a>
-  <a href="#" target="blank">
-    <img src="https://img.icons8.com/bubbles/100/000000/linkedin.png"  />
-  </a>
-  <a href="#" target="blank">
-    <img src="https://img.icons8.com/bubbles/100/000000/instagram.png"  />
-  </a>
-  <a href="#" target="top">
-    <img src="https://img.icons8.com/bubbles/100/000000/apple-mail.png"  />
-  </a>
+
+# Hi, I'm Hai 👋
+
+### Software Engineering D22 @ PTIT  
+### Full-stack Developer | Backend API | Clean UI | Product Mindset
+
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=58A6FF&center=true&vCenter=true&width=800&lines=Code+with+discipline.;Build+with+taste.;Ship+with+purpose.;Backend+Architecture+%2B+Clean+Frontend+UI" alt="Typing SVG" />
+
 </div>
 
-<br>
+---
+
+## About Me
+
+- 🎓 Software Engineering D22 @ PTIT
+- 💻 I build clean, scalable web applications
+- ⚙️ Focused on backend architecture, REST API design, authentication, and database workflows
+- 🎨 Also interested in polished UI, responsive layouts, and product-ready experiences
+- 🚀 Currently improving my skills in Spring Boot, Vue.js, Flutter, Golang, and system design
+
+> **Code with discipline. Build with taste. Ship with purpose.**
+
+---
+
+## Tech Stack
+
+<table>
+  <tr>
+    <td valign="top" width="33%">
+      <h3 align="center">Frontend</h3>
+      <p align="center">
+        <img src="https://skillicons.dev/icons?i=html,css,js,ts,vue,react,flutter,dart" />
+      </p>
+    </td>
+    <td valign="top" width="33%">
+      <h3 align="center">Backend</h3>
+      <p align="center">
+        <img src="https://skillicons.dev/icons?i=java,spring,go,nodejs,express" />
+      </p>
+    </td>
+    <td valign="top" width="33%">
+      <h3 align="center">Database & Tools</h3>
+      <p align="center">
+        <img src="https://skillicons.dev/icons?i=mysql,postgres,redis,docker,git,github,postman,idea" />
+      </p>
+    </td>
+  </tr>
+</table>
+
+---
+
+## Featured Projects
+
+| Project | Description | Tech |
+|---|---|---|
+| **Attendance QR Backend** | Production-style QR attendance backend with class management, sessions, QR check-in, absence requests, notifications, fraud detection, and OpenAPI docs | Spring Boot, MySQL, Flyway, JPA |
+| **Cafe24 Custom Storefront** | Custom ecommerce UI components, responsive headers, category menus, product pages, sliders, and maintainable CSS structure | HTML, CSS, JavaScript, jQuery |
+| **Flutter Canteen App** | Mobile app architecture using BLoC/Provider with persistent settings flow and clean state management | Flutter, Dart |
+| **Vue Admin Dashboard** | Dashboard UI with reusable components, search, filter, pagination, and clean frontend structure | Vue.js, Pinia |
+
+---
+
+## Current Focus
+
+```txt
+Backend Architecture
+REST API Design
+Authentication & Authorization
+Database Design
+Clean Code
+Frontend UI Systems
+Production-ready Web Applications
+```
+
+---
+
+## GitHub Stats
+
+<div align="center">
+
+<img width="49%" src="https://github-readme-stats.vercel.app/api?username=binkadev&show_icons=true&theme=github_dark&hide_border=true" />
+<img width="49%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=binkadev&layout=compact&theme=github_dark&hide_border=true" />
+
+<br />
+
+<img width="60%" src="https://github-readme-streak-stats.herokuapp.com?user=binkadev&theme=github-dark-blue&hide_border=true" />
+
+</div>
+
+---
+
+## Contribution Graph
+
+<div align="center">
+
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=binkadev&theme=github-compact&hide_border=true" />
+
+</div>
+
+---
+
+## Connect
+
+<div align="center">
+
+[![Facebook](https://img.shields.io/badge/Facebook-111827?style=for-the-badge&logo=facebook&logoColor=1877F2)](https://www.facebook.com/Binnn.Dev)
+[![TikTok](https://img.shields.io/badge/TikTok-111827?style=for-the-badge&logo=tiktok&logoColor=white)](https://www.tiktok.com/@tui_la_binn)
+[![GitHub](https://img.shields.io/badge/GitHub-111827?style=for-the-badge&logo=github&logoColor=white)](https://github.com/binkadev)
+
+</div>
+
+---
+
+<div align="center">
+
+### Thanks for visiting my profile.
+
+</div>
