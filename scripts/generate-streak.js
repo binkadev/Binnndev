@@ -10,11 +10,10 @@ function getTodayInTimeZone(zone) {
     month: "2-digit",
     day: "2-digit",
   });
-
   return new Date(`${formatter.format(new Date())}T00:00:00+07:00`);
 }
 
-function escapeXml(value) {
+function safe(value) {
   return String(value)
     .replace(/&/g, "&amp;")
     .replace(/</g, "&lt;")
@@ -25,103 +24,54 @@ function escapeXml(value) {
 
 const startDate = new Date(`${startDateText}T00:00:00+07:00`);
 const today = getTodayInTimeZone(timeZone);
-const diffTime = today.getTime() - startDate.getTime();
-const days = Math.max(0, Math.floor(diffTime / (1000 * 60 * 60 * 24)));
+const days = Math.max(0, Math.floor((today.getTime() - startDate.getTime()) / 86400000));
 const todayText = today.toISOString().slice(0, 10);
 const progress = Math.max(0.08, Math.min(1, days / 365));
-const progressWidth = (676 * progress).toFixed(2);
-const ringRadius = 64;
-const ringCircumference = 2 * Math.PI * ringRadius;
-const ringDash = (ringCircumference * progress).toFixed(2);
-const ringGap = (ringCircumference - ringDash).toFixed(2);
+const progressWidth = (690 * progress).toFixed(2);
+const r = 74;
+const c = 2 * Math.PI * r;
+const dash = (c * progress).toFixed(2);
+const gap = (c - dash).toFixed(2);
 
 const svg = `
-<svg width="900" height="320" viewBox="0 0 900 320" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Glassmorphism custom coding streak ${escapeXml(days)} days">
+<svg width="900" height="320" viewBox="0 0 900 320" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="pageBg" x1="40" y1="28" x2="860" y2="300" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#07111F"/>
-      <stop offset="0.48" stop-color="#0D1328"/>
-      <stop offset="1" stop-color="#17102B"/>
-    </linearGradient>
-    <linearGradient id="glass" x1="62" y1="48" x2="838" y2="276" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#FFFFFF" stop-opacity="0.12"/>
-      <stop offset="0.48" stop-color="#FFFFFF" stop-opacity="0.055"/>
-      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.085"/>
-    </linearGradient>
-    <linearGradient id="glassStroke" x1="66" y1="48" x2="834" y2="278" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#FFFFFF" stop-opacity="0.55"/>
-      <stop offset="0.48" stop-color="#93C5FD" stop-opacity="0.2"/>
-      <stop offset="1" stop-color="#C084FC" stop-opacity="0.38"/>
-    </linearGradient>
-    <linearGradient id="accent" x1="112" y1="263" x2="788" y2="263" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#22D3EE"/>
-      <stop offset="0.5" stop-color="#60A5FA"/>
-      <stop offset="1" stop-color="#C084FC"/>
-    </linearGradient>
-    <linearGradient id="ring" x1="386" y1="72" x2="528" y2="224" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#22D3EE"/>
-      <stop offset="0.5" stop-color="#60A5FA"/>
-      <stop offset="1" stop-color="#C084FC"/>
-    </linearGradient>
-    <radialGradient id="cyanGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(146 102) rotate(42) scale(232 184)">
-      <stop stop-color="#22D3EE" stop-opacity="0.42"/>
-      <stop offset="1" stop-color="#22D3EE" stop-opacity="0"/>
-    </radialGradient>
-    <radialGradient id="purpleGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(760 246) rotate(180) scale(260 186)">
-      <stop stop-color="#A855F7" stop-opacity="0.38"/>
-      <stop offset="1" stop-color="#A855F7" stop-opacity="0"/>
-    </radialGradient>
-    <filter id="shadow" x="0" y="0" width="900" height="320" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#020617" flood-opacity="0.55"/>
-    </filter>
-    <filter id="blur" x="-80" y="-80" width="1060" height="480" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-      <feGaussianBlur stdDeviation="34"/>
-    </filter>
+    <linearGradient id="bg" x1="40" y1="30" x2="860" y2="290" gradientUnits="userSpaceOnUse"><stop stop-color="#07111F"/><stop offset="0.55" stop-color="#10172A"/><stop offset="1" stop-color="#1B1232"/></linearGradient>
+    <linearGradient id="glass" x1="64" y1="54" x2="836" y2="266" gradientUnits="userSpaceOnUse"><stop stop-color="#FFFFFF" stop-opacity="0.14"/><stop offset="0.5" stop-color="#FFFFFF" stop-opacity="0.055"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0.09"/></linearGradient>
+    <linearGradient id="line" x1="64" y1="54" x2="836" y2="266" gradientUnits="userSpaceOnUse"><stop stop-color="#E0F2FE" stop-opacity="0.68"/><stop offset="0.5" stop-color="#60A5FA" stop-opacity="0.22"/><stop offset="1" stop-color="#C084FC" stop-opacity="0.48"/></linearGradient>
+    <linearGradient id="accent" x1="98" y1="252" x2="788" y2="252" gradientUnits="userSpaceOnUse"><stop stop-color="#22D3EE"/><stop offset="0.5" stop-color="#60A5FA"/><stop offset="1" stop-color="#C084FC"/></linearGradient>
   </defs>
 
-  <rect width="900" height="320" rx="0" fill="transparent"/>
+  <rect x="38" y="30" width="824" height="260" rx="34" fill="url(#bg)"/>
+  <circle cx="140" cy="86" r="120" fill="#22D3EE" fill-opacity="0.15"/>
+  <circle cx="760" cy="238" r="140" fill="#A855F7" fill-opacity="0.17"/>
+  <rect x="64" y="54" width="772" height="212" rx="28" fill="url(#glass)"/>
+  <rect x="65" y="55" width="770" height="210" rx="27" stroke="url(#line)" stroke-width="2"/>
 
-  <g filter="url(#shadow)">
-    <rect x="36" y="28" width="828" height="264" rx="30" fill="url(#pageBg)"/>
-  </g>
+  <circle cx="104" cy="90" r="4.5" fill="#22D3EE"/><circle cx="122" cy="90" r="4.5" fill="#60A5FA"/><circle cx="140" cy="90" r="4.5" fill="#C084FC"/>
+  <text x="98" y="130" fill="#F8FAFC" font-size="32" font-weight="800" font-family="Segoe UI, Arial, sans-serif">Coding Streak</text>
+  <text x="98" y="157" fill="#CBD5E1" font-size="14.5" font-family="Segoe UI, Arial, sans-serif">binkadev • consistency counter</text>
+  <rect x="98" y="182" width="126" height="32" rx="16" fill="#FFFFFF" fill-opacity="0.075" stroke="#FFFFFF" stroke-opacity="0.13"/>
+  <circle cx="117" cy="198" r="4.5" fill="#34D399"/>
+  <text x="130" y="203" fill="#A7F3D0" font-size="12" font-weight="800" letter-spacing="0.7" font-family="Segoe UI, Arial, sans-serif">AUTO SYNC</text>
+  <text x="98" y="238" fill="#94A3B8" font-size="13" font-family="Segoe UI, Arial, sans-serif">Since ${safe(startDateText)} • ${safe(todayText)}</text>
 
-  <g filter="url(#blur)">
-    <circle cx="145" cy="105" r="112" fill="url(#cyanGlow)"/>
-    <circle cx="758" cy="240" r="132" fill="url(#purpleGlow)"/>
-  </g>
+  <circle cx="452" cy="158" r="94" fill="#FFFFFF" fill-opacity="0.045" stroke="#FFFFFF" stroke-opacity="0.10"/>
+  <circle cx="452" cy="158" r="74" stroke="#162033" stroke-width="13"/>
+  <circle cx="452" cy="158" r="74" stroke="url(#accent)" stroke-width="13" stroke-linecap="round" stroke-dasharray="${dash} ${gap}" transform="rotate(-90 452 158)"/>
+  <text x="452" y="141" text-anchor="middle" fill="#94A3B8" font-size="13" font-weight="800" letter-spacing="2" font-family="Segoe UI, Arial, sans-serif">CURRENT</text>
+  <text x="452" y="185" text-anchor="middle" fill="#F8FAFC" font-size="62" font-weight="900" font-family="Segoe UI, Arial, sans-serif">${days}</text>
+  <text x="452" y="210" text-anchor="middle" fill="#C4B5FD" font-size="15" font-weight="700" font-family="Segoe UI, Arial, sans-serif">days</text>
 
-  <rect x="58" y="48" width="784" height="224" rx="26" fill="url(#glass)"/>
-  <rect x="58.75" y="48.75" width="782.5" height="222.5" rx="25.25" stroke="url(#glassStroke)" stroke-width="1.5"/>
+  <rect x="642" y="94" width="150" height="54" rx="18" fill="#FFFFFF" fill-opacity="0.065" stroke="#FFFFFF" stroke-opacity="0.11"/>
+  <text x="664" y="116" fill="#94A3B8" font-size="11.5" font-weight="800" letter-spacing="1.3" font-family="Segoe UI, Arial, sans-serif">TOTAL</text>
+  <text x="664" y="138" fill="#F8FAFC" font-size="30" font-weight="900" font-family="Segoe UI, Arial, sans-serif">${days}</text><text x="728" y="138" fill="#CBD5E1" font-size="14" font-weight="700" font-family="Segoe UI, Arial, sans-serif">days</text>
+  <rect x="642" y="164" width="150" height="54" rx="18" fill="#FFFFFF" fill-opacity="0.065" stroke="#FFFFFF" stroke-opacity="0.11"/>
+  <text x="664" y="186" fill="#94A3B8" font-size="11.5" font-weight="800" letter-spacing="1.3" font-family="Segoe UI, Arial, sans-serif">BEST</text>
+  <text x="664" y="208" fill="#F8FAFC" font-size="30" font-weight="900" font-family="Segoe UI, Arial, sans-serif">${days}</text><text x="728" y="208" fill="#CBD5E1" font-size="14" font-weight="700" font-family="Segoe UI, Arial, sans-serif">days</text>
 
-  <circle cx="112" cy="92" r="5" fill="#22D3EE"/>
-  <circle cx="130" cy="92" r="5" fill="#60A5FA"/>
-  <circle cx="148" cy="92" r="5" fill="#C084FC"/>
-
-  <text x="90" y="128" fill="#F8FAFC" font-size="28" font-weight="800" font-family="Inter, Arial, Helvetica, sans-serif">Coding Streak</text>
-  <text x="90" y="153" fill="#CBD5E1" font-size="14" font-family="Inter, Arial, Helvetica, sans-serif">Glassmorphism daily counter for binkadev.</text>
-
-  <rect x="90" y="178" width="172" height="36" rx="18" fill="#FFFFFF" fill-opacity="0.07" stroke="#FFFFFF" stroke-opacity="0.14"/>
-  <circle cx="112" cy="196" r="5" fill="#34D399"/>
-  <text x="126" y="201" fill="#A7F3D0" font-size="13" font-weight="700" font-family="Inter, Arial, Helvetica, sans-serif">AUTO UPDATED</text>
-
-  <circle cx="452" cy="155" r="82" fill="#FFFFFF" fill-opacity="0.055" stroke="#FFFFFF" stroke-opacity="0.13"/>
-  <circle cx="452" cy="155" r="64" stroke="#1E293B" stroke-width="12"/>
-  <circle cx="452" cy="155" r="64" stroke="url(#ring)" stroke-width="12" stroke-linecap="round" stroke-dasharray="${ringDash} ${ringGap}" transform="rotate(-90 452 155)"/>
-  <text x="452" y="139" text-anchor="middle" fill="#94A3B8" font-size="15" font-weight="700" letter-spacing="1.2" font-family="Inter, Arial, Helvetica, sans-serif">DAY</text>
-  <text x="452" y="176" text-anchor="middle" fill="#F8FAFC" font-size="48" font-weight="900" font-family="Inter, Arial, Helvetica, sans-serif">${days}</text>
-  <text x="452" y="202" text-anchor="middle" fill="#C4B5FD" font-size="14" font-weight="700" font-family="Inter, Arial, Helvetica, sans-serif">current run</text>
-
-  <rect x="626" y="86" width="154" height="54" rx="18" fill="#FFFFFF" fill-opacity="0.06" stroke="#FFFFFF" stroke-opacity="0.12"/>
-  <text x="648" y="109" fill="#94A3B8" font-size="12" font-weight="700" letter-spacing="1" font-family="Inter, Arial, Helvetica, sans-serif">TOTAL</text>
-  <text x="648" y="131" fill="#F8FAFC" font-size="25" font-weight="900" font-family="Inter, Arial, Helvetica, sans-serif">${days} days</text>
-
-  <rect x="626" y="152" width="154" height="54" rx="18" fill="#FFFFFF" fill-opacity="0.06" stroke="#FFFFFF" stroke-opacity="0.12"/>
-  <text x="648" y="175" fill="#94A3B8" font-size="12" font-weight="700" letter-spacing="1" font-family="Inter, Arial, Helvetica, sans-serif">BEST</text>
-  <text x="648" y="197" fill="#F8FAFC" font-size="25" font-weight="900" font-family="Inter, Arial, Helvetica, sans-serif">${days} days</text>
-
-  <text x="90" y="244" fill="#94A3B8" font-size="13" font-family="Inter, Arial, Helvetica, sans-serif">Started ${escapeXml(startDateText)} • Updated ${escapeXml(todayText)}</text>
-  <rect x="90" y="254" width="676" height="8" rx="4" fill="#0F172A"/>
-  <rect x="90" y="254" width="${progressWidth}" height="8" rx="4" fill="url(#accent)"/>
+  <rect x="98" y="252" width="690" height="8" rx="4" fill="#0F172A"/>
+  <rect x="98" y="252" width="${progressWidth}" height="8" rx="4" fill="url(#accent)"/>
 </svg>
 `;
 
