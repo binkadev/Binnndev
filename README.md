@@ -97,7 +97,7 @@ Product Thinking            System Design          Practical Web Apps
 <br />
 <br />
 
-<img width="65%" src="https://github-readme-streak-stats.herokuapp.com?user=binkadev&theme=tokyonight&hide_border=true&border_radius=10" />
+<img width="65%" src="./assets/custom-streak.svg" alt="Custom Coding Streak" />
 
 </div>
 
