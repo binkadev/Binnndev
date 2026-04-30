@@ -27,50 +27,53 @@ const today = getTodayInTimeZone(timeZone);
 const days = Math.max(0, Math.floor((today.getTime() - startDate.getTime()) / 86400000));
 const todayText = today.toISOString().slice(0, 10);
 const progress = Math.max(0.08, Math.min(1, days / 365));
-const progressWidth = (690 * progress).toFixed(2);
-const r = 74;
+const progressWidth = (704 * progress).toFixed(2);
+const r = 70;
 const c = 2 * Math.PI * r;
 const dash = (c * progress).toFixed(2);
 const gap = (c - dash).toFixed(2);
 
 const svg = `
-<svg width="900" height="320" viewBox="0 0 900 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="900" height="320" viewBox="0 0 900 320" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Luxury coding streak ${safe(days)} days">
   <defs>
-    <linearGradient id="bg" x1="40" y1="30" x2="860" y2="290" gradientUnits="userSpaceOnUse"><stop stop-color="#07111F"/><stop offset="0.55" stop-color="#10172A"/><stop offset="1" stop-color="#1B1232"/></linearGradient>
-    <linearGradient id="glass" x1="64" y1="54" x2="836" y2="266" gradientUnits="userSpaceOnUse"><stop stop-color="#FFFFFF" stop-opacity="0.14"/><stop offset="0.5" stop-color="#FFFFFF" stop-opacity="0.055"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0.09"/></linearGradient>
-    <linearGradient id="line" x1="64" y1="54" x2="836" y2="266" gradientUnits="userSpaceOnUse"><stop stop-color="#E0F2FE" stop-opacity="0.68"/><stop offset="0.5" stop-color="#60A5FA" stop-opacity="0.22"/><stop offset="1" stop-color="#C084FC" stop-opacity="0.48"/></linearGradient>
-    <linearGradient id="accent" x1="98" y1="252" x2="788" y2="252" gradientUnits="userSpaceOnUse"><stop stop-color="#22D3EE"/><stop offset="0.5" stop-color="#60A5FA"/><stop offset="1" stop-color="#C084FC"/></linearGradient>
+    <linearGradient id="bg" x1="44" y1="30" x2="856" y2="290" gradientUnits="userSpaceOnUse"><stop stop-color="#07111F"/><stop offset="0.50" stop-color="#0F172A"/><stop offset="1" stop-color="#1B1232"/></linearGradient>
+    <linearGradient id="glass" x1="66" y1="54" x2="834" y2="266" gradientUnits="userSpaceOnUse"><stop stop-color="#FFFFFF" stop-opacity="0.16"/><stop offset="0.52" stop-color="#FFFFFF" stop-opacity="0.055"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0.10"/></linearGradient>
+    <linearGradient id="stroke" x1="66" y1="54" x2="834" y2="266" gradientUnits="userSpaceOnUse"><stop stop-color="#E0F2FE" stop-opacity="0.76"/><stop offset="0.52" stop-color="#60A5FA" stop-opacity="0.22"/><stop offset="1" stop-color="#C084FC" stop-opacity="0.45"/></linearGradient>
+    <linearGradient id="accent" x1="98" y1="252" x2="802" y2="252" gradientUnits="userSpaceOnUse"><stop stop-color="#22D3EE"/><stop offset="0.52" stop-color="#60A5FA"/><stop offset="1" stop-color="#C084FC"/></linearGradient>
   </defs>
 
   <rect x="38" y="30" width="824" height="260" rx="34" fill="url(#bg)"/>
-  <circle cx="140" cy="86" r="120" fill="#22D3EE" fill-opacity="0.15"/>
-  <circle cx="760" cy="238" r="140" fill="#A855F7" fill-opacity="0.17"/>
+  <circle cx="136" cy="86" r="112" fill="#22D3EE" fill-opacity="0.12"><animate attributeName="cx" values="136;158;136" dur="18s" repeatCount="indefinite"/><animate attributeName="cy" values="86;106;86" dur="20s" repeatCount="indefinite"/><animate attributeName="fill-opacity" values="0.09;0.16;0.09" dur="12s" repeatCount="indefinite"/></circle>
+  <circle cx="764" cy="238" r="128" fill="#A855F7" fill-opacity="0.14"><animate attributeName="cx" values="764;738;764" dur="20s" repeatCount="indefinite"/><animate attributeName="cy" values="238;218;238" dur="18s" repeatCount="indefinite"/><animate attributeName="fill-opacity" values="0.10;0.18;0.10" dur="14s" repeatCount="indefinite"/></circle>
+
   <rect x="64" y="54" width="772" height="212" rx="28" fill="url(#glass)"/>
-  <rect x="65" y="55" width="770" height="210" rx="27" stroke="url(#line)" stroke-width="2"/>
+  <rect x="65" y="55" width="770" height="210" rx="27" stroke="url(#stroke)" stroke-width="2"/>
 
   <circle cx="104" cy="90" r="4.5" fill="#22D3EE"/><circle cx="122" cy="90" r="4.5" fill="#60A5FA"/><circle cx="140" cy="90" r="4.5" fill="#C084FC"/>
   <text x="98" y="130" fill="#F8FAFC" font-size="32" font-weight="800" font-family="Segoe UI, Arial, sans-serif">Coding Streak</text>
-  <text x="98" y="157" fill="#CBD5E1" font-size="14.5" font-family="Segoe UI, Arial, sans-serif">binkadev • consistency counter</text>
-  <rect x="98" y="182" width="126" height="32" rx="16" fill="#FFFFFF" fill-opacity="0.075" stroke="#FFFFFF" stroke-opacity="0.13"/>
-  <circle cx="117" cy="198" r="4.5" fill="#34D399"/>
+  <text x="98" y="156" fill="#CBD5E1" font-size="14.5" font-family="Segoe UI, Arial, sans-serif">binkadev • luxury counter</text>
+
+  <rect x="98" y="182" width="136" height="32" rx="16" fill="#FFFFFF" fill-opacity="0.075" stroke="#FFFFFF" stroke-opacity="0.13"><animate attributeName="fill-opacity" values="0.07;0.14;0.07" dur="2.8s" repeatCount="indefinite"/><animate attributeName="stroke-opacity" values="0.13;0.24;0.13" dur="2.8s" repeatCount="indefinite"/></rect>
+  <circle cx="117" cy="198" r="4.5" fill="#34D399"><animate attributeName="opacity" values="0.65;1;0.65" dur="1.6s" repeatCount="indefinite"/></circle>
   <text x="130" y="203" fill="#A7F3D0" font-size="12" font-weight="800" letter-spacing="0.7" font-family="Segoe UI, Arial, sans-serif">AUTO SYNC</text>
-  <text x="98" y="238" fill="#94A3B8" font-size="13" font-family="Segoe UI, Arial, sans-serif">Since ${safe(startDateText)} • ${safe(todayText)}</text>
+  <text x="98" y="236" fill="#94A3B8" font-size="13.2" font-family="Segoe UI, Arial, sans-serif">Since ${safe(startDateText)} • ${safe(todayText)}</text>
 
-  <circle cx="452" cy="158" r="94" fill="#FFFFFF" fill-opacity="0.045" stroke="#FFFFFF" stroke-opacity="0.10"/>
-  <circle cx="452" cy="158" r="74" stroke="#162033" stroke-width="13"/>
-  <circle cx="452" cy="158" r="74" stroke="url(#accent)" stroke-width="13" stroke-linecap="round" stroke-dasharray="${dash} ${gap}" transform="rotate(-90 452 158)"/>
-  <text x="452" y="141" text-anchor="middle" fill="#94A3B8" font-size="13" font-weight="800" letter-spacing="2" font-family="Segoe UI, Arial, sans-serif">CURRENT</text>
-  <text x="452" y="185" text-anchor="middle" fill="#F8FAFC" font-size="62" font-weight="900" font-family="Segoe UI, Arial, sans-serif">${days}</text>
-  <text x="452" y="210" text-anchor="middle" fill="#C4B5FD" font-size="15" font-weight="700" font-family="Segoe UI, Arial, sans-serif">days</text>
+  <circle cx="452" cy="160" r="90" fill="#FFFFFF" fill-opacity="0.042" stroke="#FFFFFF" stroke-opacity="0.09"/>
+  <circle cx="452" cy="160" r="70" stroke="#162033" stroke-width="12"/>
+  <circle cx="452" cy="160" r="70" stroke="url(#accent)" stroke-width="12" stroke-linecap="round" stroke-dasharray="${dash} ${gap}" transform="rotate(-90 452 160)"/>
+  <text x="452" y="138" text-anchor="middle" fill="#94A3B8" font-size="13" font-weight="800" letter-spacing="2.4" font-family="Segoe UI, Arial, sans-serif">STREAK</text>
+  <text x="452" y="190" text-anchor="middle" fill="#F8FAFC" font-size="68" font-weight="900" font-family="Segoe UI, Arial, sans-serif">${days}</text>
 
-  <rect x="642" y="94" width="150" height="54" rx="18" fill="#FFFFFF" fill-opacity="0.065" stroke="#FFFFFF" stroke-opacity="0.11"/>
-  <text x="664" y="116" fill="#94A3B8" font-size="11.5" font-weight="800" letter-spacing="1.3" font-family="Segoe UI, Arial, sans-serif">TOTAL</text>
-  <text x="664" y="138" fill="#F8FAFC" font-size="30" font-weight="900" font-family="Segoe UI, Arial, sans-serif">${days}</text><text x="728" y="138" fill="#CBD5E1" font-size="14" font-weight="700" font-family="Segoe UI, Arial, sans-serif">days</text>
-  <rect x="642" y="164" width="150" height="54" rx="18" fill="#FFFFFF" fill-opacity="0.065" stroke="#FFFFFF" stroke-opacity="0.11"/>
-  <text x="664" y="186" fill="#94A3B8" font-size="11.5" font-weight="800" letter-spacing="1.3" font-family="Segoe UI, Arial, sans-serif">BEST</text>
-  <text x="664" y="208" fill="#F8FAFC" font-size="30" font-weight="900" font-family="Segoe UI, Arial, sans-serif">${days}</text><text x="728" y="208" fill="#CBD5E1" font-size="14" font-weight="700" font-family="Segoe UI, Arial, sans-serif">days</text>
+  <rect x="644" y="92" width="154" height="62" rx="20" fill="#FFFFFF" fill-opacity="0.065" stroke="#FFFFFF" stroke-opacity="0.11"/>
+  <text x="666" y="116" fill="#94A3B8" font-size="11.5" font-weight="800" letter-spacing="1.4" font-family="Segoe UI, Arial, sans-serif">TOTAL</text>
+  <text x="666" y="144" fill="#F8FAFC" font-size="31" font-weight="900" font-family="Segoe UI, Arial, sans-serif">${days}</text>
+  <text x="666" y="162" fill="#CBD5E1" font-size="14" font-weight="700" font-family="Segoe UI, Arial, sans-serif">days</text>
+  <rect x="644" y="166" width="154" height="62" rx="20" fill="#FFFFFF" fill-opacity="0.065" stroke="#FFFFFF" stroke-opacity="0.11"/>
+  <text x="666" y="190" fill="#94A3B8" font-size="11.5" font-weight="800" letter-spacing="1.4" font-family="Segoe UI, Arial, sans-serif">BEST</text>
+  <text x="666" y="218" fill="#F8FAFC" font-size="31" font-weight="900" font-family="Segoe UI, Arial, sans-serif">${days}</text>
+  <text x="666" y="236" fill="#CBD5E1" font-size="14" font-weight="700" font-family="Segoe UI, Arial, sans-serif">days</text>
 
-  <rect x="98" y="252" width="690" height="8" rx="4" fill="#0F172A"/>
+  <rect x="98" y="252" width="704" height="8" rx="4" fill="#0F172A"/>
   <rect x="98" y="252" width="${progressWidth}" height="8" rx="4" fill="url(#accent)"/>
 </svg>
 `;
