@@ -1,0 +1,69 @@
+const fs = require("fs");
+
+const startDateText = process.env.STREAK_START_DATE || "2025-10-12";
+const timeZone = process.env.TIME_ZONE || "Asia/Ho_Chi_Minh";
+
+function getTodayInTimeZone(zone) {
+  const formatter = new Intl.DateTimeFormat("en-CA", {
+    timeZone: zone,
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  });
+
+  return new Date(`${formatter.format(new Date())}T00:00:00+07:00`);
+}
+
+function escapeXml(value) {
+  return String(value)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&apos;");
+}
+
+const startDate = new Date(`${startDateText}T00:00:00+07:00`);
+const today = getTodayInTimeZone(timeZone);
+const diffTime = today.getTime() - startDate.getTime();
+const days = Math.max(0, Math.floor(diffTime / (1000 * 60 * 60 * 24)));
+const todayText = today.toISOString().slice(0, 10);
+
+const svg = `
+<svg width="760" height="260" viewBox="0 0 760 260" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Custom coding streak ${escapeXml(days)} days">
+  <defs>
+    <linearGradient id="cardGlow" x1="0" y1="0" x2="760" y2="260" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1B1B2A"/>
+      <stop offset="0.55" stop-color="#1B1B2A"/>
+      <stop offset="1" stop-color="#121826"/>
+    </linearGradient>
+    <linearGradient id="ringGradient" x1="310" y1="55" x2="450" y2="180" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#70A5FD"/>
+      <stop offset="1" stop-color="#BF91F3"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="760" height="260" rx="16" fill="url(#cardGlow)"/>
+  <line x1="260" y1="55" x2="260" y2="205" stroke="#D8D8E8" stroke-width="1" opacity="0.9"/>
+  <line x1="500" y1="55" x2="500" y2="205" stroke="#D8D8E8" stroke-width="1" opacity="0.9"/>
+
+  <text x="130" y="98" text-anchor="middle" fill="#70A5FD" font-size="39" font-weight="800" font-family="Arial, Helvetica, sans-serif">${days}</text>
+  <text x="130" y="143" text-anchor="middle" fill="#70A5FD" font-size="20" font-family="Arial, Helvetica, sans-serif">Coding Days</text>
+  <text x="130" y="183" text-anchor="middle" fill="#38BDAE" font-size="16" font-family="Arial, Helvetica, sans-serif">${escapeXml(startDateText)} - Present</text>
+
+  <circle cx="380" cy="108" r="58" stroke="#273655" stroke-width="8"/>
+  <circle cx="380" cy="108" r="58" stroke="url(#ringGradient)" stroke-width="8" stroke-linecap="round" stroke-dasharray="310 60" transform="rotate(-85 380 108)"/>
+  <path d="M380 40 C390 51 390 64 380 74 C370 64 370 51 380 40 Z" fill="#70A5FD"/>
+  <circle cx="380" cy="58" r="10" fill="#1B1B2A"/>
+  <text x="380" y="110" text-anchor="middle" fill="#BF91F3" font-size="39" font-weight="800" font-family="Arial, Helvetica, sans-serif">${days}</text>
+  <text x="380" y="155" text-anchor="middle" fill="#BF91F3" font-size="22" font-weight="700" font-family="Arial, Helvetica, sans-serif">Current Streak</text>
+  <text x="380" y="195" text-anchor="middle" fill="#38BDAE" font-size="16" font-family="Arial, Helvetica, sans-serif">Updated ${escapeXml(todayText)}</text>
+
+  <text x="630" y="98" text-anchor="middle" fill="#70A5FD" font-size="39" font-weight="800" font-family="Arial, Helvetica, sans-serif">${days}</text>
+  <text x="630" y="143" text-anchor="middle" fill="#70A5FD" font-size="20" font-family="Arial, Helvetica, sans-serif">Longest Streak</text>
+  <text x="630" y="183" text-anchor="middle" fill="#38BDAE" font-size="16" font-family="Arial, Helvetica, sans-serif">Since ${escapeXml(startDateText)}</text>
+</svg>
+`;
+
+fs.mkdirSync("assets", { recursive: true });
+fs.writeFileSync("assets/custom-streak.svg", svg.trim());
