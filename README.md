@@ -2,14 +2,14 @@
 
 <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:020617,20:111827,45:7C3AED,70:06B6D4,100:020617&height=235&section=header&text=Tran%20Hoang%20Hai&fontSize=56&fontAlignY=35&animation=twinkling&fontColor=F8FAFC&desc=binkadev%20%E2%80%A2%20Software%20Engineering%20D22%20%40%20PTIT&descSize=17&descAlignY=56&descColor=C7D2FE" />
 
-<img src="https://readme-typing-svg.demolab.com?font=Orbitron&size=22&pause=1100&color=38BDF8&center=true&vCenter=true&width=760&lines=Full-stack+Developer+in+progress;From+backend+logic+to+clean+interfaces;Code+with+discipline.;Build+with+taste.;Ship+with+purpose." alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Orbitron&size=22&pause=1100&color=38BDF8&center=true&vCenter=true&width=760&lines=Backend-oriented+Software+Engineering+student;Java+%E2%80%A2+Spring+Boot+%E2%80%A2+REST+APIs;Payment-oriented+systems+in+progress;Code+with+discipline.;Build+with+taste.;Ship+with+purpose." alt="Typing SVG" />
 
 <br />
 <br />
 
-<img src="https://img.shields.io/badge/Backend%20API-0F172A?style=for-the-badge&logo=springboot&logoColor=22C55E" />
-<img src="https://img.shields.io/badge/Clean%20UI-0F172A?style=for-the-badge&logo=figma&logoColor=F472B6" />
-<img src="https://img.shields.io/badge/Product%20Mindset-0F172A?style=for-the-badge&logo=github&logoColor=38BDF8" />
+<img src="https://img.shields.io/badge/Backend%20Engineering-0F172A?style=for-the-badge&logo=springboot&logoColor=22C55E" />
+<img src="https://img.shields.io/badge/Java%20Focus-0F172A?style=for-the-badge&logo=openjdk&logoColor=F97316" />
+<img src="https://img.shields.io/badge/Software%20Engineering%20D22-0F172A?style=for-the-badge&logo=github&logoColor=38BDF8" />
 
 </div>
 
@@ -17,9 +17,9 @@
 
 ## 🎬 Opening Frame
 
-I am a **Software Engineering D22 student at Posts and Telecommunications Institute of Technology (PTIT)**, building my path as a full-stack developer.
+I am a **Software Engineering D22 student at Posts and Telecommunications Institute of Technology (PTIT)**, currently shaping my profile toward **backend engineering**.
 
-I enjoy turning ideas into practical software — from backend APIs and database workflows to clean, usable interfaces. My focus is not only making things work, but making them structured, maintainable, and ready to grow.
+I care about building software that is structured, readable, and practical: clear APIs, reliable database workflows, authentication, documentation, and business logic that can be reviewed and maintained.
 
 > **Code with discipline. Build with taste. Ship with purpose.**
 
@@ -28,9 +28,9 @@ I enjoy turning ideas into practical software — from backend APIs and database
 ## ⚡ Build Direction
 
 ```txt
-Backend Architecture        REST API Design        Authentication
-Database Workflows          Clean Code             UI Systems
-Product Thinking            System Design          Practical Web Apps
+Java Backend              Spring Boot APIs          Authentication
+Database Workflows        REST API Design           Clean Documentation
+Transaction Thinking      Testing Habits            Portfolio-ready Projects
 ```
 
 ---
@@ -57,23 +57,46 @@ Product Thinking            System Design          Practical Web Apps
 
 ## 🚀 Featured Repositories
 
-<div align="center">
-
-<a href="https://github.com/binkadev/Attendance-Check-By-QRcode">
-  <img width="49%" src="https://github-readme-stats.vercel.app/api/pin/?username=binkadev&repo=Attendance-Check-By-QRcode&theme=tokyonight&hide_border=true" />
-</a>
-<a href="https://github.com/binkadev/HTTM-AI">
-  <img width="49%" src="https://github-readme-stats.vercel.app/api/pin/?username=binkadev&repo=HTTM-AI&theme=tokyonight&hide_border=true" />
-</a>
-
-<a href="https://github.com/binkadev/quanliphongtro">
-  <img width="49%" src="https://github-readme-stats.vercel.app/api/pin/?username=binkadev&repo=quanliphongtro&theme=tokyonight&hide_border=true" />
-</a>
-<a href="https://github.com/binkadev/Omnifood">
-  <img width="49%" src="https://github-readme-stats.vercel.app/api/pin/?username=binkadev&repo=Omnifood&theme=tokyonight&hide_border=true" />
-</a>
-
-</div>
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <h3><a href="https://github.com/binkadev/Attendance-Check-By-QRcode">Attendance Check By QR Code</a></h3>
+      <p>A backend-oriented attendance system focused on class sessions, QR check-in workflows, absence handling, and fraud-detection direction.</p>
+      <p>
+        <img src="https://img.shields.io/badge/Java-111827?style=flat-square&logo=openjdk&logoColor=F97316" />
+        <img src="https://img.shields.io/badge/Spring%20Boot-111827?style=flat-square&logo=springboot&logoColor=22C55E" />
+        <img src="https://img.shields.io/badge/MySQL-111827?style=flat-square&logo=mysql&logoColor=38BDF8" />
+      </p>
+    </td>
+    <td width="50%" valign="top">
+      <h3><a href="https://github.com/binkadev/HoangHai-Portfolio">HoangHai Portfolio</a></h3>
+      <p>A personal portfolio built to present projects, direction, and engineering identity with a refined visual system and production deployment.</p>
+      <p>
+        <img src="https://img.shields.io/badge/Vue-111827?style=flat-square&logo=vue.js&logoColor=42B883" />
+        <img src="https://img.shields.io/badge/Vite-111827?style=flat-square&logo=vite&logoColor=FBBF24" />
+        <img src="https://img.shields.io/badge/Vercel-111827?style=flat-square&logo=vercel&logoColor=FFFFFF" />
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3><a href="https://github.com/binkadev/HTTM-AI">HTTM-AI</a></h3>
+      <p>An AI-oriented application repository used as a product-thinking playground for turning ideas into practical digital workflows.</p>
+      <p>
+        <img src="https://img.shields.io/badge/TypeScript-111827?style=flat-square&logo=typescript&logoColor=60A5FA" />
+        <img src="https://img.shields.io/badge/AI%20Product-111827?style=flat-square&logo=openai&logoColor=A78BFA" />
+      </p>
+    </td>
+    <td width="50%" valign="top">
+      <h3><a href="https://github.com/binkadev/quanliphongtro">quanliphongtro</a></h3>
+      <p>A boarding-house management system designed to digitize room, tenant, billing, and management workflows.</p>
+      <p>
+        <img src="https://img.shields.io/badge/JavaScript-111827?style=flat-square&logo=javascript&logoColor=FACC15" />
+        <img src="https://img.shields.io/badge/Web%20App-111827?style=flat-square&logo=github&logoColor=38BDF8" />
+      </p>
+    </td>
+  </tr>
+</table>
 
 ---
 
@@ -81,7 +104,7 @@ Product Thinking            System Design          Practical Web Apps
 
 - Build backend systems with clearer structure and stronger business logic
 - Improve API documentation and testing habits
-- Design cleaner frontend components and responsive interfaces
+- Study Java, Spring Boot, and payment-oriented backend workflows
 - Keep projects readable for both developers and reviewers
 - Turn student projects into portfolio-ready repositories
 
@@ -89,15 +112,36 @@ Product Thinking            System Design          Practical Web Apps
 
 ## 📊 GitHub Snapshot
 
+<table align="center">
+  <tr>
+    <td align="center" width="33%">
+      <h2>225</h2>
+      <b>Total Contributions</b><br />
+      <sub>Oct 16, 2021 - Present</sub>
+    </td>
+    <td align="center" width="33%">
+      <h2>4</h2>
+      <b>Current Streak</b><br />
+      <sub>Apr 29 - May 2</sub>
+    </td>
+    <td align="center" width="33%">
+      <h2>9</h2>
+      <b>Longest Streak</b><br />
+      <sub>Mar 10 - Mar 18</sub>
+    </td>
+  </tr>
+</table>
+
 <div align="center">
 
-<img width="49%" src="https://github-readme-stats.vercel.app/api?username=binkadev&show_icons=true&theme=tokyonight&hide_border=true&rank_icon=github" />
-<img width="49%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=binkadev&layout=compact&theme=tokyonight&hide_border=true" />
-
-<br />
 <br />
 
-<img width="65%" src="https://streak-stats.demolab.com?user=binkadev&theme=tokyonight&hide_border=true&border_radius=10" alt="GitHub Streak" />
+<img src="https://img.shields.io/badge/Java-50.44%25-0F172A?style=for-the-badge&logo=openjdk&logoColor=F97316" />
+<img src="https://img.shields.io/badge/JavaScript-28.12%25-0F172A?style=for-the-badge&logo=javascript&logoColor=FACC15" />
+<img src="https://img.shields.io/badge/TypeScript-11.66%25-0F172A?style=for-the-badge&logo=typescript&logoColor=60A5FA" />
+<img src="https://img.shields.io/badge/PHP-4.41%25-0F172A?style=for-the-badge&logo=php&logoColor=818CF8" />
+<img src="https://img.shields.io/badge/Blade-3.09%25-0F172A?style=for-the-badge&logo=laravel&logoColor=F87171" />
+<img src="https://img.shields.io/badge/CSS-2.28%25-0F172A?style=for-the-badge&logo=css3&logoColor=38BDF8" />
 
 </div>
 
@@ -115,6 +159,9 @@ Product Thinking            System Design          Practical Web Apps
 </a>
 <a href="https://github.com/binkadev">
   <img src="https://img.shields.io/badge/GitHub-0F172A?style=for-the-badge&logo=github&logoColor=F8FAFC" />
+</a>
+<a href="https://hoanghai-portfolio.vercel.app">
+  <img src="https://img.shields.io/badge/Portfolio-0F172A?style=for-the-badge&logo=vercel&logoColor=FFFFFF" />
 </a>
 
 </div>
