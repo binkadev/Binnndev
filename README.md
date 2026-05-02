@@ -9,7 +9,7 @@
 
 <div align="center">
 
-<img width="100%" src="https://raw.githubusercontent.com/binkadev/binkadev/master/assets/ink-banner.svg" alt="BinkaDev Banner" />
+<img width="100%" src="https://raw.githubusercontent.com/binkadev/binkadev/master/assets/banner.png" alt="BinkaDev Banner" />
 
 <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=800&size=23&duration=2400&pause=850&color=F8E9D2&center=true&vCenter=true&width=980&lines=Backend-oriented+Software+Engineering+student;Java+Spring+Boot+REST+APIs;Vue+3+TypeScript+Flutter;Code+with+discipline.+Build+with+taste.+Ship+with+purpose." alt="Typing SVG" />
 
