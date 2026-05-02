@@ -11,7 +11,7 @@
 
 <img width="100%" src="https://raw.githubusercontent.com/binkadev/binkadev/master/assets/banner.png" alt="BinkaDev Banner" />
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=800&size=23&duration=2400&pause=850&color=F8E9D2&center=true&vCenter=true&width=980&lines=Backend-oriented+Software+Engineering+student;Java+Spring+Boot+REST+APIs;Vue+3+TypeScript+Flutter;Code+with+discipline.+Build+with+taste.+Ship+with+purpose." alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com/?font=JetBrains+Mono&weight=700&size=24&duration=3400&pause=1200&color=F8E9D2&center=true&vCenter=true&width=1050&lines=Tran+Hoang+Hai+%7C+BinkaDev;Backend-Focused+Developer;Building+Clean+%26+Production-Ready+Systems;Java+%7C+Spring+Boot+%7C+REST+APIs;Clean+Architecture+%7C+Testing+%7C+System+Design;Open+for+Work+%26+Collaboration;Contact+me+for+Backend+Projects" alt="Typing SVG" />
 
 <br /><br />
 
